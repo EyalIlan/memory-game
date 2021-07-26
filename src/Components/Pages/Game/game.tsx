@@ -23,6 +23,9 @@ const game:React.FC<{name:string}> =(props) => {
     }
 
 
+    console.log(obj.firstCard);
+    
+
     useEffect(() =>{
 
       const request = async () =>{
