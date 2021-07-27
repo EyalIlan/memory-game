@@ -1,12 +1,24 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react';
+import GamePage from './Components/Pages/Game/game';
+import {BrowserRouter,Route,Switch} from 'react-router-dom'
+import Homepage from './Components/Pages/Home/homepage';
 import './App.css';
-import GamePage from './Components/Pages/Game/game'
-
 
 function App() {
   return (
     <div className="App">
-      <GamePage name= 'eyal' />
+      <BrowserRouter>
+      <Switch>
+
+        <Route path="/game">
+            <GamePage></GamePage>
+        </Route>
+        <Route path="/">
+          <Homepage></Homepage>
+        </Route>
+
+      </Switch>
+      </BrowserRouter>
     </div>
   );
 }

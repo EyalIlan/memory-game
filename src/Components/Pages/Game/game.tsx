@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+
 import Axios from '../../Utils/axios'
 
 
@@ -10,7 +11,7 @@ interface Cardobj  {
 }
 
 
-const game:React.FC<{name:string}> =(props) => {
+const Game:React.FC<{}> =(props) => {
 
     const [data,SetData] = useState([])
 
@@ -22,9 +23,6 @@ const game:React.FC<{name:string}> =(props) => {
         Score:0
     }
 
-
-    console.log(obj.firstCard);
-    
 
     useEffect(() =>{
 
@@ -45,8 +43,8 @@ const game:React.FC<{name:string}> =(props) => {
 
     return (
         <div>
-
+          
         </div>
     )
 }
-export default game
+export default Game
